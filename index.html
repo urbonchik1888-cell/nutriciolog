@@ -253,7 +253,6 @@
                 margin: 0 auto;
                 order: -1;
             }
-            .nav-links { display: none; }
             
             .contacts-grid { grid-template-columns: 1fr; }
         }
@@ -324,17 +323,20 @@
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 70%;
-                height: 100vh;
-                background: #f9f7f2;
+                width: 200px;
+                height: auto;
+                max-height: 70vh;
+                background: rgba(249,247,242,0.95);
+                backdrop-filter: blur(10px);
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: right 0.3s ease;
+                justify-content: flex-start;
+                align-items: stretch;
+                transition: right 0.25s ease;
                 z-index: 999;
-                padding: 80px 20px;
-                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                padding: 60px 12px 20px;
+                box-shadow: -1px 0 10px rgba(0,0,0,0.05);
                 display: flex;
+                border-radius: 0 0 0 8px;
             }
             
             .nav-links.active {
@@ -342,12 +344,33 @@
             }
             
             .nav-links a {
-                margin: 15px 0;
-                font-size: 18px;
-                padding: 10px 20px;
+                margin: 2px 0;
+                font-size: 14px;
+                padding: 8px 12px;
                 display: block;
                 width: 100%;
-                text-align: center;
+                text-align: left;
+                border-radius: 4px;
+                transition: all 0.15s ease;
+                color: #2d2a26;
+                font-weight: 400;
+            }
+            
+            .nav-links a:hover {
+                background: rgba(141, 121, 81, 0.08);
+                transform: none;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .nav-links {
+                width: 180px;
+                padding: 60px 8px 20px;
+            }
+            
+            .nav-links a {
+                font-size: 13px;
+                padding: 6px 8px;
             }
         }
     </style>
@@ -405,7 +428,7 @@
             </div>
         </div>
         <div class="hero-photo-wrapper">
-            <img src="2026-01-01 21.52.45.jpg" alt="Фотография нутрициолога" />
+            <img src="img/2026-01-01 21.52.45.jpg" alt="Фотография нутрициолога" />
         </div>
     </section>
 </div>
@@ -1097,7 +1120,7 @@
         }
     </style>
 
-    <section id="recipes" style="position:relative; overflow:hidden; background-image:url('2026-01-01 22.32.32.jpg'); background-size:cover; background-position:center;">
+    <section id="recipes" style="position:relative; overflow:hidden; background-image:url('img/2026-01-01 22.32.32.jpg'); background-size:cover; background-position:center;">
         <div style="background:rgba(255,255,255,0.85); padding:24px 16px; margin:0 -16px;">
         <h2>Питание и рецепты</h2>
         <div class="section-text">
@@ -1122,7 +1145,7 @@
                     <li>Чем опасны случайные и дешёвые комплексы «на всякий случай»</li>
                     <li>Как читать состав и понимать, будет ли работать добавка</li>
                 </ul>
-                <img src="2026-01-01 22.11.44.jpg" alt="Фото с витаминами и добавками" style="margin-top:10px;" />
+                <img src="img/2026-01-01 22.11.44.jpg" alt="Фото с витаминами и добавками" style="margin-top:10px;" />
             </article>
             <article class="card">
                 <div class="card-title">Примеры рецептов правильного питания</div>
@@ -1135,7 +1158,7 @@
                     <li>Обеды и ужины, которые легко вписать в будни</li>
                     <li>Примеры тарелок для снижения веса и поддержки результата</li>
                 </ul>
-                <img src="2026-01-01 22.19.27.jpg" alt="Примеры блюд правильного питания" style="margin-top:10px;" />
+                <img src="img/2026-01-01 22.19.27.jpg" alt="Примеры блюд правильного питания" style="margin-top:10px;" />
             </article>
             <article class="card">
                 <div class="card-title">Вдохновение для клиентов</div>
@@ -1148,7 +1171,7 @@
                     <li>Идеи для сторис и чек-листов с рецептами</li>
                     <li>Варианты для разных целей: энергия, комфорт, снижение веса</li>
                 </ul>
-                <img src="2026-01-01 22.32.39.jpg" alt="Галерея рецептов" style="margin-top:10px;" />
+                <img src="img/2026-01-01 22.32.39.jpg" alt="Галерея рецептов" style="margin-top:10px;" />
             </article>
         </div>
     </section>
